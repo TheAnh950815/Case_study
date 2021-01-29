@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Paint</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            background: burlywood;
+        }
+
+        canvas {
+            margin: 10px auto;
+            display: block;
+            margin-top: 0px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 15%;float: left; line-height: 2px">
+    <p>
+        <button onclick="clearPaint()">newPaint</button>
+        <button id="eraser" onclick="selectionColor('white')">eraser</button>
+    </p>
+    <p>
+    <select id="sizeline" style="width: 100px" onchange="sizeLine();">
+        <option>Size</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    </p>
+    <p>
+        <button id="red" onclick="selectionColor('red')" style="background: red; width: 30px;height: 30px"></button>
+        <button id="black" onclick="selectionColor('black')" style="background: black; width: 30px;height: 30px"></button>
+        <button id="yellow" onclick="selectionColor('yellow')" style="background: yellow; width: 30px;height: 30px"></button>
+        <button id="blue" onclick="selectionColor('blue')" style="background: blue; width: 30px;height: 30px"></button>
+    </p>
+</div>
+
+    <canvas id="myCanvas" ></canvas>
+
+</body>
+<script type="text/javascript" src="drawPaint.js"></script>
+<script type="text/javascript" src="clearPaint.js"></script>
+<script type="text/javascript" src="selectionColor.js"></script>
+</html>
